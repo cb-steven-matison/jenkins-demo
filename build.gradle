@@ -1,4 +1,5 @@
 plugins {
+    id 'java'
     id 'base'
     id 'com.palantir.docker' version '0.22.1'
     id 'com.palantir.docker-run' version '0.22.1'
@@ -6,6 +7,7 @@ plugins {
 }
 
 project.version = scmVersion.version
+sourceCompatibility = 11
 
 docker {
     name "${project.name}:${project.version}"
